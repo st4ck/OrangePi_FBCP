@@ -31,7 +31,7 @@ gcc -o  PiFBCP PiFBCP.c
 
 ### Tested
 
-Tested on OrangePi Zero with Waveshare 3.5 (A)
+Tested on OrangePi Zero with Waveshare TFT 3.5 (A)
 
 
 ------
