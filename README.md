@@ -17,6 +17,7 @@ Example
 ### Limits
 
 1. source and destination must have same resolution. I advise to modify script.bin and obtain same resolution
+
   Example:
   
   disp_mode = 0
