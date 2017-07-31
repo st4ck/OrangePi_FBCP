@@ -18,10 +18,16 @@ Example
 
 1. source and destination must have same resolution. I advise to modify script.bin and obtain same resolution
   Example:
+  
   disp_mode = 0
+  
   fb0_format = 5
+  
   fb0_width = 480
+  
   fb0_height = 320
+  
+  
 I've developed a version to copy fb to a different resolution but It's not efficient due to scaling and interpolation
 2. Convert from 32bpp/24bpp to 16bpp using an internal inline function
 
