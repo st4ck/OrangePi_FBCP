@@ -1,60 +1,44 @@
 # OrangePi_FBCP
 
-参考了rpi-fbcp,同样用于复制Framebuffer内容,只是没有用到底层的硬件加速,因此速度会变慢,但是增强了移植性
+Inspired from KameraSui FBCP and from rpi-fbcp to copy a framebuffer to another. Doesn't use hw accell and doesn't exploid fd mapping.
+Read entire source fd, work in memory exploiting caching and locality and writing entire frame to destination
 
-Develop By KameraSui ~
-2017
+Develop By Roberto Tacconelli 2017
 
 Feel Free To Use & Distribution
 
-
-
-### Usage/用法
+### Usage
 
 PiFBCP   fb_from   fb_to
 
-例如   PiFBCP 0 1 把framebuffer设备/dev/fb0的内容复制到/dev/fb1
+Example
+./PiFBCP 0 8 (copy from fd0 to fd8)
 
+### Limits
 
+1. source and destination must have same resolution. I advise to modify script.bin and obtain same resolution
+  Example:
+  disp_mode = 0
+  fb0_format = 5
+  fb0_width = 480
+  fb0_height = 320
+I've developed a version to copy fb to a different resolution but It's not efficient due to scaling and interpolation
+2. Convert from 32bpp/24bpp to 16bpp using an internal inline function
 
-### Limit/限制
-
-1. 复制源和目标设备分辨率相同
-2. 复制源像素为32位或者24位,目标设备为16位,所以就是典型的 VideoDevice -> TFT Monitor
-
-
-
-### Compile/编译
+### Compile
 
 gcc -o  PiFBCP PiFBCP.c
 
+### Tested
 
-
-### Performance/性能
-
-开启前后'top'对比
-
-@320x240x16bit
-
-![top_comp](mdfiles/top_comp.png)
-
-
-
-### Problems/问题
-
-缺乏GPU加速
-
-
-
-### Test/测试
-
-在OrangePi Lite上测试通过
-
+Tested on OrangePi Zero with Waveshare 3.5 (A)
 
 
 ------
 
 Inspired By
+
+KameraSui/OrangePi_FBCP
 
 tasanakorn/rpi-fbcp
 
