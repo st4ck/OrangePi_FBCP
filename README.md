@@ -1,4 +1,4 @@
-# OrangePi_FBCP
+# Orange Pi FBCP
 
 Inspired from KameraSui FBCP and from rpi-fbcp to copy a framebuffer to another. Doesn't use hw accell and doesn't exploid fd mapping.
 Read entire source fd, work in memory exploiting caching and locality and writing entire frame to destination
