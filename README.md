@@ -30,6 +30,7 @@ Example
   
   
 I've developed a version to copy fb to a different resolution but It's not efficient due to scaling and interpolation
+
 2. Convert from 32bpp/24bpp to 16bpp using an internal inline function
 
 ### Compile
