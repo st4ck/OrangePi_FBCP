@@ -3,9 +3,7 @@
 Inspired from KameraSui FBCP and from rpi-fbcp to copy a framebuffer to another. Doesn't use hw accell and doesn't exploit fd mapping.
 Read entire source fd, work in memory exploiting caching and locality and writing entire frame to destination
 
-Develop By Roberto Tacconelli 2017
-
-Feel Free To Use & Distribution
+Feel Free To Use & Distribute
 
 ### Usage
 
